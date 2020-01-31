@@ -1,0 +1,6 @@
+  CẤU HÌNH HTTP REQUEST
+
+Content-Type  | application/json; charset=UTF-8
+Method        | POST
+Domain        | production: https://payment.momo.vn
+              | sandbox:    https://test-payment.momo.vn

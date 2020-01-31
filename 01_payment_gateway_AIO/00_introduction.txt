@@ -1,0 +1,6 @@
+  CỔNG THANH TOÁN MOMO
+
+- MoMo AIO Payment là giải pháp thanh toán của MoMo áp dụng trên nhiều nền tảng khác nhau chỏ trong 1 API duy nhất
+
+- Bạn có thể thử thanh toán ngay bằng MoMo bằng cách nhấn vào nút xem trước ở phần bên dưới.
+  Đây là bản ở chế độ thử nghiệm, điều đó có nghĩa là bạn sẽ không bị trừ tiền thật

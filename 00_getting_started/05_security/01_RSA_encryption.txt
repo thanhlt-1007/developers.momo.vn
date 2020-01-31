@@ -1,0 +1,16 @@
+  MÃ HÓA RSA
+
+- Mã hóa RSA là một thuật toán mã hóa công khai để bảo vệ thông tin trên đường truyền
+  Sử dụng một cặp key (public key và private key) để mã hóa và giải mã dữ liệu
+  Đối tác dùng public key do MoMo cung cấp để mã hóa dât theo định dạng của MoMo,
+  MoMo sẽ giải mã bằng private ket
+
+- Ví dụ:
+  Dữ liệu trước khi RSA
+  {
+    "partnerCode": "MOMOIQA420180417",
+    "partnerRefId": "Merchant123556666",
+    "partnerTransId": "8374736463",
+    "amount": 40000,
+    "description": "Thanh toan momo"
+  }

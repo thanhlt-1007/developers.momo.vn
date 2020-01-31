@@ -1,0 +1,3 @@
+  CẤU HÌNH API
+
+POST /gw_payment/transactionProcessor

@@ -1,0 +1,14 @@
+  PHƯƠNG THỨC THANH TOÁN
+
+- Cổng thanh toán MoMo (All In One):
+  Áp dụng đối tác có thanh toán tiền trên nền tảng Website, Mobile, Smart TV
+
+- Thanh toán App In App:
+  Áp dụng cho đối tác có ứng dụng di động muốn mở trực tiếp ứng dụng MoMo để thanh toán
+
+- Thanh toán POS:
+  Áp dung cho đối tác có hệ thống bán hàng bằng máy POS
+  Thu ngân dùng máy scan để quét "MÃ THANH TOÁN" trên app MoMo để thanh toán
+
+- Thanh toán QR Code:
+  Đối tác tạo QR code theo đọnh dạng MoMo cung cấp, khách hàng chỉ cần dùng app MoMo để quét và thanh toán

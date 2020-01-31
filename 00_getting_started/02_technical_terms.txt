@@ -1,0 +1,14 @@
+  THUẬT NGỮ
+
+- Tài khoản doanh nghiệp:
+  Mỗi đối tác khi liên kết với MoMo sẽ sử dụng tài khoản doanh nghiệp (M4M - MoMo 4 Business)
+  Tài khoản này sẽ dùng để quản lý các giao dịch, thông in tích hợp, cửa hàng, sub-merchant, v.v
+
+- Mã giao dịch MoMo:
+  Mã giao dịch MoMo (TID / transId) là một mã được MoMo tạo ra để định danh cho một giao dịch của đối tác
+  TID này là duy nhất trên hộ thống MoMo
+
+- Mã giai dịch đối tác
+  Mã giao dịch đối tác (refID / orderId) là mã duy nhất và định danh
+  cho giao dịch của đối tác khi gửi qua MoMo để yêu cầu thanh toán
+  Mội TID sẽ ứng với một refID

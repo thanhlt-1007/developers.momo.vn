@@ -1,0 +1,14 @@
+  SƠ ĐỒ XỬ LÝ
+
+- Thanh toán đơn hàng trên website desktop/mobile
+
+
+  MÔ HÌNH THANH TOÁN
+
+Tham khảo hướng dẫn sau để áp dụng MoMo vào trang mua hàng của bạn
+- Bước 1: Khách hàng kiểm tra đơn hàng và chọn MoMo là phương thức thanh tóan
+- Bước 2: Server của bạn tạo session thanh toán và gửi yêu cầu thanh toán qua MoMo
+- Bước 3: Chuyển trang mua hàng sang trang thanh toán của MoMo
+- Bước 4: Khách hàng sử dụng ứng dung MoMo để quét mã QR hoặc đăng nhập dể thanh toán.
+- Bước 5: Sau khi thanh toán MoMo sẽ chuyển khách hàng về trang mua hàng 
+- Bước 6: Server của bạn xác thực gioa dịch và cập nhập cho khách hàng.

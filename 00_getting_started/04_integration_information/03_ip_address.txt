@@ -1,0 +1,5 @@
+  ĐỊA CHỈ IP
+
+Môi trường  | Incoming        | Outcoming
+Sandbox     | 210.245.113.71  | 118.69.210.244
+Production  | 118.69.212.158  | 118.69.210.244

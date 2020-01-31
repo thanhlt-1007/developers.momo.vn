@@ -1,0 +1,23 @@
+  QUY TRÌNH TÍCH HỢP
+
+Các bước cơ bản để tích hợp với MoMo
+- Đăng ký tài khoản doanh nghiệp
+  Bạn cần hoàn thành quá trình đăng ký với đầy đủ thông tin,
+  Trạng thái mặc định của doanh nghiệp sẽ là chưa xác thực
+  Thông tin tích hợp mặc định sẽ là môi trường Test
+
+- Tham khảo và lựa chọn phương thức thanh toán áp dụng cho dịch vụ của đơn vị kinh doanh
+
+- Tiến hành tích hợp theo tài liệu của từng phương thức thanh toán
+
+- Đơn vị tiến hành kiểm thử phần mềm,
+  tham khảo các testcase của MoMo cung cấp để kiểm tra các lỗi phổ biến trong quá trình thanh toán.
+
+- Sau khi đơn vị kinh doanh hoàn thành tích hợp và kiểm thử,
+  MoMo sẽ xác thực dịch vụ của bạn trên môi trường test trước khi lên production
+
+- Sau khi được xác nhận, tài khoản doanh nghiệp của bạn sẽ được chuyaarn sang trạng thái đã xác thực.
+
+- Thay đổi các thông tin tích hợp theo môi trường production.
+
+- Triển khai dịch vụ thanh toán cho khách hàng

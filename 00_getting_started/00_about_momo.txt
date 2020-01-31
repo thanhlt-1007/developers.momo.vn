@@ -1,0 +1,10 @@
+  VỀ MOMO API
+
+- MoMo Payment Platform API là giải pháp thanh toán cho các đơn vị kinh doanh
+cho phép khách hàng sử dụng tài khoản Ví MoMo để thanh toán các dịch vụ trên nền tảng khác nhau
+  - Desktop Website
+  - Mobile Website
+  - Mobile Application
+  - POS
+  - Pay In Bill
+  - Web In App MoMo

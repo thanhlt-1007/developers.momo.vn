@@ -1,0 +1,57 @@
+  CHỮ KÝ ĐIỆN TỬ
+
+- Signature là 1 chuỗi ký tự được tạo ra từ 1 thuật toán cho trước
+  sử dụng để kiểm tra tính đúng đắn của dữ liệu trên đường truyền giữa 2 hệ thống
+
+- Trong tài liệu này MoMo sử dụng thuật toán HMAC_SHA256 để tạo signature
+  Dữ liệu đầu vào bao gồm Secret Key và data
+  Data được tạo ra theo định dạng key1=value1&key2=value2&key3=value3...
+
+- Thông tin về các cặp key=value xem chi tiết hơn trong từng bảng mô tả HTTP Request / HTTP Response
+
+- Ví dụ:
+{
+  "accessKey": "F8BBA842ECF85",
+  "partnerCode": "MOMO",
+  "requestType": "captureMoMoWallet",
+  "notifyUrl": "https://momo.vn",
+  "returnUrl": "https://momo.vn",
+  "orderId": "MM1540456472575",
+  "amount": "150000",
+  "orderInfo": "SDK team",
+  "requestId": "MM1540456472575",
+  "extraData": "email=abc@gmail.com",
+  "signature": "996ed81d68a1b05c99516835e404b2d0146d9b12fbcecbf80c7e51df51cac85e"
+}
+
+- Cách tạo chữ ký điện tử
+partnerCode=partnerCode
+&accessKey=accessKey
+&requestId=requestId
+&amount=amount
+&orderId=orderId
+&orderInfo=orderInfo
+&returnUrl=returnUrl
+&notifyUrl=notifyUrl
+&extraData=extraData
+
+partnerCode=MOMO
+&accessKey=F8BBA842ECF85
+&requestId=MM1540456472575
+&amount=150000
+&orderId=MM1540456472575
+&orderInfo=SDK team.
+&returnUrl=https://momo.vn
+&notifyUrl=https://momo.vn
+&extraData=email=abc@gmail.com
+
+require "openssl"
+secret_key = "K951B6PE1waDMi640xX08PD3vg6EkVlz"
+data = "partnerCode=MOMO&accessKey=F8BBA842ECF85&requestId=MM1540456472575&amount=150000&orderId=MM1540456472575&orderInfo=SDK team.&returnUrl=https://momo.vn&notifyUrl=https://momo.vn&extraData=email=abc@gmail.com"
+OpenSSL::HMAC.hexdigest("SHA256", secret_key, data)
+
+  MÃ HÓA RSA
+
+- Mã hóa RSA là một thuật toán mã hóa công khai để bảo vệ thông tin trên đường truyền
+  Sử dụng một cặp key (public key và private key) để mã hóa và giải mã dữ liệu
+  Đối tác dùng public key do MoMo cung cấp để mã hóa dât theo định dạng của MoMo, MoMo sẽ giải mã bằng private key
