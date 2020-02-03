@@ -1,0 +1,108 @@
+Xử lý kết quả thanh toán
+  Sau khi khách hàng xác nhận thanh toán trên ứng dụng MoMo
+  chúng tôi sẽ thông báo kết quả thanh toán cho bạn thông qua 2 phương thức.
+
+Giao diện (Redirect)
+  Khách hàng sẽ được chuyển (redirect) từ trang thanh toán của MoMo về trang mua hàng của đối tác
+  dựa vào field returnUrl mà bạn đã truyền vào ở lệnh captureMoMoWallet và sẽ đính kèm thêm các tham số vào URL có định dạng như sau
+
+  Phương thức: GET
+
+IPN - Instant Payment Notification
+  MoMo Server sẽ sử dụng API được khai báo ở field notifyUrl để gửi 1 HTTP Request với cấu hình bên dưới tới máy chủ đối tác
+
+  Phương thức: POST
+
+URL
+  notifyUrl
+
+Method
+  POST
+
+Headers
+  content-type: application/x-www-form-urlencoded	
+
+Payload
+  Tham khảo bảng mô tả tham số bên dưới
+
+Thông tin tham số
+
+partnerCode
+  String
+  Required
+  Thông tin tích hợp
+
+accessKey
+  String
+  Required
+  Thông tin tích hợp
+
+requestId
+  String
+  Required
+  requestId của đối tác
+
+amount
+  String
+  Required
+  Số tiền thanh toán
+
+orderId
+  String
+  Required
+  Mã đơn hàng của đối tác
+
+orderInfo
+  String
+  Required
+  Thông tin đơn hàng
+
+orderType
+  String
+  Required
+  momo_wallet
+
+transId
+  String
+  Required
+  Mã giao dịch của MoMo
+
+errorCode
+  int
+  Required
+  Trạng thái giao dịch của đơn hàng
+
+message
+  String
+  Required
+  Mô tả lỗi bằng tiếng Anh
+
+localMessage
+  String
+  Required
+  Mô tả lỗi bằng tiếng Việt
+
+payType
+  String
+  Required
+  Hình thức thanh toán: web or qr
+
+responseTime
+  String
+  Required
+  Thời gian trả kết qủa thanh toán về đối tác
+  Định dạng YYYY-MM-DD HH:mm:ss
+  Múi giờ GMT + 7
+
+extraData
+  String
+  Thông tin thêmm, mặc định là ""
+
+signature
+  String
+  Required
+  Chữ ký để kiểm tra tính đúng đắn của dữ klieeju khi truyền tải qua mạng
+
+Đối với trường errorMessage và message đối tác chủ động xử lý, có thể tham khảo mã lỗi của MoMo để trả về
+MoMo sẽ sử dụng những thông tin này để feedback cho khách hàng và nếu có lỗi xảy ra trong quá trình thanh toán từ phía đối tác
+

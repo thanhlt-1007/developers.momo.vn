@@ -70,3 +70,78 @@ extraData
   Required
   Thông tin bổ sung theo định dạng <key>=<value>;<key>=<value>
   Giá trị mặc định là trống ""
+
+Thông tin redirecting (returnUrl)
+
+WebLink: Liên kết để mở website dạng https://example.com/
+
+Example Request
+{
+  "accessKey": "F8BBA842ECF85",
+  "partnerCode": "MOMO",
+  "requestType": "captureMoMoWallet",
+  "returnUrl": "https://momo.vn",
+  "orderId": "MM1540456472575",
+  "amount": "150000",
+  "orderInfo": "SDK team",
+  "requestId": "MM1540456472575",
+  "extraData": "email=abc@gmail.com",
+  "signature": "996ed81d68a1b05c99516835e404b2d0146d9b12fbcecbf80c7e51df51cac85e"
+}
+
+HTTP Response
+
+Danh sách nhũng phương thức thanh toán mà MoMo cung cấp cho đơn vị kinh doanh
+
+requestId
+  String
+  Required
+  Giống với yêu cầu ban đầu
+
+errorCode
+  int
+  Required
+  Mã lỗi
+
+message
+  String
+  Required
+  Mô tả lỗi tiếng Anh
+
+localMessage
+  String
+  Required
+  Mô tả lỗi Tiếng Việt
+
+requestType
+  String
+  Required
+  captureMoMoWallet
+
+payUrl
+  String
+  Required
+  URL để chuyển từ trang mua hàng của đối tác sang trang thanh toán của MoMo
+
+qrCodeUrl
+  String
+  Dữ liệu để tạo mã QR nếu bạn muốn khách hàng quét mã QR trực tiếp trên trang mua hàng hoặc in mã lên hóa đơn
+  Lưu ý: Đây không phải URL chứa hình ảnh của mã QR, bạn cần sử dụng thư viện ngoài để tạo mã QR
+
+deeplink
+  String
+  URL để mở ứng dụng trực tiếp trên MoMo (khách hàng phải cài đặt ứng dụng MoMo trước) và trang xác nhận thanh toán
+
+deeplinkWebInApp
+  String
+  URL để mở màn hình xác nhận thanh toán của ứng dụng MoMo.
+  áp dụng khi website của đối tác nhúng vào trong ứng dụng MoMo
+
+signature
+  String
+  Required
+  Chữ ký để kiểm tra thông tin
+  Sử dụng thuật toán HMAC_SHA256 với data theo định dạng
+
+Thanh toán
+  Bạn cần cài đặt ứng dụng MoMo TEST và sử dụng tài khoản MoMo TEST để thực hiện giao dịch

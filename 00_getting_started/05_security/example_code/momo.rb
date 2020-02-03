@@ -62,15 +62,15 @@ request.add_field('Content-Type', 'application/json')
 request.body = json_request.to_json
 
 puts "SENDING...."
-response = http.request(request)
-result = JSON.parse(response.body)
+# response = http.request(request)
+# result = JSON.parse(response.body)
 
-puts "--------------------RESPONSE----------------"
-puts JSON.pretty_generate(result)
-if result["errorCode"] == 0
-  puts "Success"
-  puts "pay URL is: " + result["payUrl"]
-else
-  puts "Fail"
-  puts "Error is: " + result["localMessage"]
-end
+# puts "--------------------RESPONSE----------------"
+# puts JSON.pretty_generate(result)
+# if result["errorCode"] == 0
+#   puts "Success"
+#   puts "pay URL is: " + result["payUrl"]
+# else
+#   puts "Fail"
+#   puts "Error is: " + result["localMessage"]
+# end
